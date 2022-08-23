@@ -38,7 +38,7 @@ try:
     button = browser.find_element(By.ID, 'book')
     # говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
     WebDriverWait(browser, 15).until(
-            EC.text_to_be_present_in_element()(locator=(By.ID, "price"), text_='100')
+            EC.text_to_be_present_in_element(locator=(By.ID, "price"), text_='100')
         )
     button.click()
 
